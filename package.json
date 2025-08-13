@@ -1,52 +1,56 @@
 {
-  "name": "ssejjengoedward8576.sektawebsite.io",
-  "version": "1.0.0",
-  "description": "SEKTA TECH. SOLUTIONS Official Website",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack serve --open",
-    "build": "webpack --mode production"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SsejjengoEdward8576/ssejjengoedward8576.sektawebsite.io.git"
-  },
-  "author": "SEKTA TECH. SOLUTIONS",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/SsejjengoEdward8576/ssejjengoedward8576.sektawebsite.io/issues"
-  },
-  "homepage": "https://github.com/SsejjengoEdward8576/ssejjengoedward8576.sektawebsite.io#readme",
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.5.2",
-    "@fortawesome/free-brands-svg-icons": "^6.5.2",
-    "@fortawesome/free-solid-svg-icons": "^6.5.2",
-    "@fortawesome/react-fontawesome": "^0.2.2",
-    "@popperjs/core": "^2.11.8",
-    "bootstrap": "^5.3.3",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-router-dom": "^6.24.1"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.28.0",
-    "@babel/preset-env": "^7.28.0",
-    "@babel/preset-react": "^7.27.1",
-    "autoprefixer": "^10.4.21",
-    "babel-loader": "^10.0.0",
-    "clean-webpack-plugin": "^4.0.0",
-    "css-loader": "^7.1.2",
-    "file-loader": "^6.2.0",
-    "html-webpack-plugin": "^5.6.3",
-    "mini-css-extract-plugin": "^2.9.4",
-    "postcss-loader": "^8.1.1",
-    "sass": "^1.77.6",
-    "sass-loader": "^14.2.1",
-    "style-loader": "^4.0.0",
-    "url-loader": "^4.1.1",
-    "webpack": "^5.101.1",
-    "webpack-cli": "^6.0.1",
-    "webpack-dev-server": "^5.2.2"
-  }
+    "name": "ssejjengoedward8576.sektawebsite.io",
+      "version": "1.0.0",
+        "description": "SEKTA TECH. SOLUTIONS Official Website",
+          "main": "index.js",
+            "scripts": {
+                "start": "webpack serve --mode development --open",
+                    "build": "webpack --mode production",
+                        "predeploy": "npm run build",
+                            "deploy": "gh-pages -d dist",
+                                "test": "echo \"Error: no test specified\" && exit 1"
+                                  },
+                                    "repository": {
+                                        "type": "git",
+                                            "url": "git+https://github.com/SsejjengoEdward8576/ssejjengoedward8576.sektawebsite.io.git"
+                                              },
+                                                "author": "SEKTA TECH. SOLUTIONS",
+                                                  "license": "ISC",
+                                                    "bugs": {
+                                                        "url": "https://github.com/SsejjengoEdward8576/ssejjengoedward8576.sektawebsite.io/issues"
+                                                          },
+                                                            "homepage": "https://SsejjengoEdward8576.github.io/ssejjengoedward8576.sektawebsite.io/",
+                                                              "dependencies": {
+                                                                  "@fortawesome/fontawesome-svg-core": "^6.5.2",
+                                                                      "@fortawesome/free-brands-svg-icons": "^6.5.2",
+                                                                          "@fortawesome/free-solid-svg-icons": "^6.5.2",
+                                                                              "@fortawesome/react-fontawesome": "^0.2.2",
+                                                                                  "@popperjs/core": "^2.11.8",
+                                                                                      "bootstrap": "^5.3.3",
+                                                                                          "react": "^18.3.1",
+                                                                                              "react-dom": "^18.3.1",
+                                                                                                  "react-router-dom": "^6.24.1"
+                                                                                                    },
+                                                                                                      "devDependencies": {
+                                                                                                          "@babel/core": "^7.28.0",
+                                                                                                              "@babel/preset-env": "^7.28.0",
+                                                                                                                  "@babel/preset-react": "^7.27.1",
+                                                                                                                      "autoprefixer": "^10.4.21",
+                                                                                                                          "babel-loader": "^10.0.0",
+                                                                                                                              "clean-webpack-plugin": "^4.0.0",
+                                                                                                                                  "css-loader": "^7.1.2",
+                                                                                                                                      "file-loader": "^6.2.0",
+                                                                                                                                          "gh-pages": "^6.1.1",
+                                                                                                                                              "html-webpack-plugin": "^5.6.3",
+                                                                                                                                                  "mini-css-extract-plugin": "^2.9.4",
+                                                                                                                                                      "postcss-loader": "^8.1.1",
+                                                                                                                                                          "sass": "^1.77.6",
+                                                                                                                                                              "sass-loader": "^14.2.1",
+                                                                                                                                                                  "style-loader": "^4.0.0",
+                                                                                                                                                                      "url-loader": "^4.1.1",
+                                                                                                                                                                          "webpack": "^5.101.1",
+                                                                                                                                                                              "webpack-cli": "^6.0.1",
+                                                                                                                                                                                  "webpack-dev-server": "^5.2.2"
+                                                                                                                                                                                    }
+                                                                                                                                                                                    }
 }

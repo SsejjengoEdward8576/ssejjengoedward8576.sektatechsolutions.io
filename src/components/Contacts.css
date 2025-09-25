@@ -1,3 +1,13 @@
+.contacts-body {
+    padding: 16px;
+    min-height: 100vh;
+    background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+}
+
+.header {
+    margin-bottom: 10px;
+}
+
 .contents {
     background-color: rgba(172, 230, 243, 0.9);
     padding: 20px;
@@ -19,21 +29,23 @@
     }
 }
 
-#intro-content {
-    margin-top: 20px;
+.contacts-section {
+    margin-top: 10px;
 }
 
 .contacts-container {
     background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 24px;
+    border-radius: 12px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 24px;
 }
 
 .contacts-container h2 {
     color: rgb(0, 20, 244);
     font-size: 2rem;
     margin-bottom: 10px;
+    font-weight: bold;
 }
 
 .contact-text {
@@ -43,29 +55,75 @@
     margin-bottom: 20px;
 }
 
+.contact-list {
+    margin-bottom: 20px;
+}
+
 .contact-item {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
+    gap: 10px;
 }
 
 .contact-icon {
-    margin-right: 10px;
     font-size: 1.5rem;
     color: #ff6f61;
+    margin-right: 10px;
 }
 
 .contact-item a {
     font-size: 1.1rem;
     color: #0066cc;
     text-decoration: none;
+    transition: color 0.2s;
 }
 
-.contact-item a:hover {
+.contact-item a:hover,
+.contacts-tel a:hover {
     text-decoration: underline;
+    color: #ff6f61;
 }
 
 .contacts-tel a {
     display: block;
     margin-bottom: 5px;
+    font-size: 1.05rem;
+}
+
+.contact-extra {
+    margin-top: 24px;
+    background: linear-gradient(90deg, #e0eafc 60%, #fff 100%);
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.07);
+}
+
+.contact-extra h3 {
+    color: #0020f4;
+    margin-bottom: 6px;
+    font-size: 1.2rem;
+}
+
+.contact-extra p {
+    color: #333;
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+@media (max-width: 700px) {
+    .contacts-container {
+        padding: 12px;
+        border-radius: 8px;
+    }
+
+    .contact-extra {
+        padding: 8px;
+        border-radius: 6px;
+    }
+
+    .contents {
+        padding: 10px;
+        margin-top: 10px;
+    }
 }

@@ -17,6 +17,8 @@ body {
 
 .service-product-body {
     padding: 20px;
+    background: linear-gradient(120deg, #fcb69f 0%, #ffefba 100%);
+    min-height: 100vh;
 }
 
 .header h1 {
@@ -29,10 +31,10 @@ body {
 }
 
 .contents {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.95);
     padding: 20px;
     margin-top: 20px;
-    border-radius: 10px;
+    border-radius: 12px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     animation: slideInUp 1s ease-in-out;
 }
@@ -53,9 +55,10 @@ body {
     background: linear-gradient(to right, #ffefba, #ffffff);
     padding: 20px;
     margin-top: 20px;
-    border-radius: 10px;
+    border-radius: 12px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    will-change: transform, opacity;
 }
 
 .section:hover {
@@ -64,7 +67,50 @@ body {
 
 .intro-section {
     background-color: #e55a4f !important;
-    color: #ec6fc5 !important;
+    color: #fff !important;
+    border-radius: 12px;
+}
+
+.intro-content h2 {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.intro-content ol {
+    margin-left: 20px;
+    color: #fff;
+}
+
+.services-section h3,
+.products-section h3,
+.testimonials-section h3,
+.case-studies-section h3,
+.faqs-section h3 {
+    font-size: 1.7rem;
+    color: #ff6f61;
+    margin-top: 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.service {
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.service h4 {
+    font-size: 1.3rem;
+    color: #e55a4f;
+    margin-bottom: 8px;
+}
+
+.service p {
+    color: #333;
+    margin-bottom: 12px;
 }
 
 .products-section {
@@ -80,22 +126,29 @@ body {
 .product-item {
     background-color: #fff;
     padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transition: box-shadow 0.3s;
+}
+
+.product-item:hover {
+    box-shadow: 0 8px 24px rgba(236, 111, 197, 0.15);
 }
 
 .product-item img {
     max-width: 100%;
     border-radius: 8px;
     margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
 }
 
-.product-item h4 {
-    font-size: 1.5rem;
+.product-info h4 {
+    font-size: 1.3rem;
     margin-bottom: 0.5rem;
+    color: #e55a4f;
 }
 
-.product-item p {
+.product-info p {
     color: #666;
     margin-bottom: 1rem;
 }
@@ -105,39 +158,18 @@ body {
     background-color: #007bff;
     color: #fff;
     text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    padding: 0.5rem 1.1rem;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-.product-item .btn:hover {
+.product-item .btn:hover,
+.product-item .btn:focus {
     background-color: #0056b3;
-}
-
-.section h3 {
-    font-size: 1.5rem;
-    color: #ff6f61;
-    margin-top: 15px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-}
-
-.section p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #333;
-}
-
-.service {
-    background: linear-gradient(to right, #ffecd2, #fcb69f);
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.service h4 {
-    font-size: 1.3rem;
-    color: #e55a4f;
+    transform: scale(1.05);
+    outline: none;
 }
 
 .testimonials-section {
@@ -148,15 +180,24 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.testimonial {
-    padding: 10px;
-    margin-bottom: 10px;
-    border-left: 3px solid #ec6fc5;
-    background: #fff;
+.testimonial-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
-.testimonial p {
-    margin: 10px 0;
+.testimonial {
+    padding: 12px;
+    border-left: 4px solid #ec6fc5;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+.testimonial-author {
+    color: #e55a4f;
+    font-weight: bold;
+    font-size: 1rem;
 }
 
 .case-studies-section {
@@ -167,8 +208,22 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.case-study-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.case-study {
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
+    padding: 14px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
 .case-study h4 {
     color: #e55a4f;
+    margin-bottom: 6px;
 }
 
 .case-study p {
@@ -184,6 +239,19 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.faq {
+    background: #f9f9f9;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
 .faq h4 {
     color: #e55a4f;
     margin-bottom: 5px;
@@ -194,32 +262,17 @@ body {
     color: #666;
 }
 
-.navBtn {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-.navBtn button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.navBtn button:hover {
-    background-color: #0056b3;
-}
-
-@media (max-width: 768px) {
-    .navBtn {
-        flex-direction: column;
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .product-grid {
+        grid-template-columns: 1fr;
     }
 
-    .navBtn button {
-        margin-bottom: 10px;
+    .contents {
+        padding: 10px;
+    }
+
+    .section {
+        padding: 10px;
     }
 }

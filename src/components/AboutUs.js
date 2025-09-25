@@ -7,26 +7,34 @@ import Footer from '../assets/Footer';
 
 const AboutUs = () => {
   return (
-    <div className="body">
-      <h1 className="animated">About Us</h1>
+    <div className="about-body">
       <NavigationMenu />
-      <div className="contents">
-        <section id="intro-content">
-          <div className="main-content">
-            <h2>Brief Company Background:</h2>
-            <h4>Company CEO</h4>
-            <div className="image-text-wrapper">
-              <img src={edward} alt="Company CEO" className="ceo-image" />
+      <main>
+        <h1 className="animated">About Us</h1>
+        <div className="contents">
+          <section id="company-background">
+            <div className="main-content">
+              <h2>Brief Company Background</h2>
               <p>
-                The company was pioneered by two great thinkers (Mr. Eddieson S. & K.K. Winters) in the year 2018.
-                The two started as ICT trainers in Mukono Town Council and by the year 2020, 
-                they decided to invest bigger by transforming themselves as tech. generals in Mukono district. 
+                SEKTA TECH. SOLUTIONS was pioneered by two great thinkers, Mr. Eddieson S. & K.K. Winters, in 2018.
+                They started as ICT trainers in Mukono Town Council and by 2020, decided to invest bigger by transforming themselves into tech generals in Mukono district.
                 Eddieson is the co-founder of this great company.
               </p>
             </div>
-          </div>
-        </section>
-      </div>
+          </section>
+          <section id="ceo-profile">
+            <div className="main-content">
+              <h4>Company CEO</h4>
+              <div className="image-text-wrapper">
+                <img src={edward} alt="Eddieson S., CEO of SEKTA TECH. SOLUTIONS" className="ceo-image" />
+                <p>
+                  Eddieson S. has been instrumental in the growth and vision of SEKTA TECH. SOLUTIONS, leading the company with innovation and dedication.
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
       <Footer />
     </div>
   );

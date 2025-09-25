@@ -8,7 +8,6 @@ import Footer from '../assets/Footer';
 import touchTech from "../../public/Images/touch-tech.jpg";
 import webServices from "../../public/Images/webservices.jpeg";
 
-
 const Home = () => {
   return (
     <div className="home-body">
@@ -46,17 +45,17 @@ const Home = () => {
           <h3>Featured Products</h3>
           <div className='product-grid'>
             <div className="product-item">
-              <img src={touchTech} alt="Touch Tech" />
+              <img src={touchTech} alt="Touch Tech Product" />
               <h4>Product 1</h4>
               <p>Description of Product 1.</p>
-              <a href="#" className="btn">Buy Now</a>
+              <button className="btn">Buy Now</button>
             </div>
 
             <div className='product-item'>
-              <img src={webServices} alt="WebServices" />
+              <img src={webServices} alt="Web Services Product" />
               <h4>Product 2</h4>
               <p>Description of Product 2.</p>
-              <a href="#" className="btn">Buy Now</a>
+              <button className="btn">Buy Now</button>
             </div>
           </div>
         </section>
@@ -64,7 +63,7 @@ const Home = () => {
         <section className="newsletter-section section">
           <h3>Subscribe to Our Newsletter</h3>
           <p>Stay up-to-date with the latest tech trends and promotions.</p>
-          <p>Register with us <Link to="/registrationform" className='link'>Here</Link></p>
+          <p>Register with us <Link to="/registration-form" className='link'>Here</Link></p>
         </section>
       </div>
       <Footer />

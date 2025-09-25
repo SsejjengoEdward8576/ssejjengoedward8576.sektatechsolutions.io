@@ -10,6 +10,64 @@ import edward from '../../public/Images/edward.jpg';
 import touchTech from '../../public/Images/touch-tech.jpg';
 import webServices from '../../public/Images/webservices.jpeg';
 
+// Data arrays for products, testimonials, case studies, and FAQs
+const products = [
+  {
+    img: edward,
+    alt: "Edward Product",
+    title: "Product 1",
+    desc: "A powerful solution for managing your business operations efficiently.",
+    link: "/buy/product1"
+  },
+  {
+    img: touchTech,
+    alt: "Touch Technology Product",
+    title: "Product 2",
+    desc: "Innovative touch technology for modern businesses.",
+    link: "/buy/product2"
+  },
+  {
+    img: webServices,
+    alt: "Web Services Product",
+    title: "Product 3",
+    desc: "Comprehensive web services to boost your online presence.",
+    link: "/buy/product3"
+  }
+];
+
+const testimonials = [
+  {
+    text: "SEKTA TECH. SOLUTIONS transformed our business with their innovative solutions. Their team is incredibly knowledgeable and professional.",
+    author: "Client A"
+  },
+  {
+    text: "The custom software developed by SEKTA TECH. SOLUTIONS has streamlined our operations and improved our efficiency significantly.",
+    author: "Client B"
+  }
+];
+
+const caseStudies = [
+  {
+    title: "Enterprise Resource Planning System",
+    desc: "We developed a comprehensive ERP system for a large corporation, which integrated various business processes and improved overall productivity."
+  },
+  {
+    title: "E-Commerce Platform",
+    desc: "We created a custom e-commerce platform for a retail client, enabling them to reach a wider audience and increase their sales."
+  }
+];
+
+const faqs = [
+  {
+    question: "What services do you offer?",
+    answer: "We offer IT training, information systems development, custom software development, and IT consultancy services."
+  },
+  {
+    question: "How can I get started?",
+    answer: "You can contact us through our website or give us a call to discuss your needs and get a customized solution."
+  }
+];
+
 const ServicesProducts = () => {
   return (
     <div className="service-product-body">
@@ -48,66 +106,51 @@ const ServicesProducts = () => {
         <section className="products-section section">
           <h3>Featured Products</h3>
           <div className="product-grid">
-            <div className="product-item">
-              <img src={edward} alt="Edward" />
-              <div className="product-info">
-                <h4>Product 1</h4>
-                <p>Description of Product 1.</p>
-                <a href="#" className="btn">Buy Now</a>
+            {products.map((product, idx) => (
+              <div className="product-item" key={idx}>
+                <img src={product.img} alt={product.alt} />
+                <div className="product-info">
+                  <h4>{product.title}</h4>
+                  <p>{product.desc}</p>
+                  <Link to={product.link} className="btn">Buy Now</Link>
+                </div>
               </div>
-            </div>
-
-            <div className="product-item">
-              <img src={touchTech} alt="Touch Technology" />
-              <div className="product-info">
-                <h4>Product 2</h4>
-                <p>Description of Product 2.</p>
-                <a href="#" className="btn">Buy Now</a>
-              </div>
-            </div>
-
-            <div className="product-item">
-              <img src={webServices} alt="Web Services" />
-              <div className="product-info">
-                <h4>Product 3</h4>
-                <p>Description of Product 3.</p>
-                <a href="#" className="btn">Buy Now</a>
-              </div>
-            </div>
+            ))}
           </div>
         </section>
 
         <section className="testimonials-section section">
           <h3>What Our Clients Say</h3>
-          <div className="testimonial">
-            <p>"SEKTA TECH. SOLUTIONS transformed our business with their innovative solutions. Their team is incredibly knowledgeable and professional." - Client A</p>
-          </div>
-          <div className="testimonial">
-            <p>"The custom software developed by SEKTA TECH. SOLUTIONS has streamlined our operations and improved our efficiency significantly." - Client B</p>
+          <div className="testimonial-list">
+            {testimonials.map((t, idx) => (
+              <div className="testimonial" key={idx}>
+                <p>"{t.text}" <br /><span className="testimonial-author">- {t.author}</span></p>
+              </div>
+            ))}
           </div>
         </section>
 
         <section className="case-studies-section section">
           <h3>Case Studies</h3>
-          <div className="case-study">
-            <h4>Case Study 1: Enterprise Resource Planning System</h4>
-            <p>We developed a comprehensive ERP system for a large corporation, which integrated various business processes and improved overall productivity.</p>
-          </div>
-          <div className="case-study">
-            <h4>Case Study 2: E-Commerce Platform</h4>
-            <p>We created a custom e-commerce platform for a retail client, enabling them to reach a wider audience and increase their sales.</p>
+          <div className="case-study-list">
+            {caseStudies.map((c, idx) => (
+              <div className="case-study" key={idx}>
+                <h4>{c.title}</h4>
+                <p>{c.desc}</p>
+              </div>
+            ))}
           </div>
         </section>
 
         <section className="faqs-section section">
           <h3>Frequently Asked Questions</h3>
-          <div className="faq">
-            <h4>What services do you offer?</h4>
-            <p>We offer IT training, information systems development, custom software development, and IT consultancy services.</p>
-          </div>
-          <div className="faq">
-            <h4>How can I get started?</h4>
-            <p>You can contact us through our website or give us a call to discuss your needs and get a customized solution.</p>
+          <div className="faq-list">
+            {faqs.map((faq, idx) => (
+              <div className="faq" key={idx}>
+                <h4>{faq.question}</h4>
+                <p>{faq.answer}</p>
+              </div>
+            ))}
           </div>
         </section>
       </div>

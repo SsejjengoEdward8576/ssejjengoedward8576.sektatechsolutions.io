@@ -9,6 +9,7 @@
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     animation: slideInUp 1s ease-in-out;
+    will-change: transform, opacity;
 }
 
 @keyframes slideInUp {
@@ -27,9 +28,11 @@
     background: linear-gradient(to right, #bae1ff, #ffffff);
     padding: 20px;
     margin-top: 20px;
+    margin-bottom: 24px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    will-change: transform, opacity;
 }
 
 .section:hover {
@@ -97,4 +100,22 @@
 .link:hover {
     text-decoration: underline;
     color: #007bff;
+}
+
+/* Responsive grid for smaller screens */
+@media (max-width: 600px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 10px;
+    }
+}
+
+/* Focus styles for accessibility */
+.product-item .btn:focus,
+.link:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
 }

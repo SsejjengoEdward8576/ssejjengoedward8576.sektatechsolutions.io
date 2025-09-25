@@ -97,3 +97,12 @@ footer {
 footer p {
     margin: 5px 0;
 }
+
+/* Added .site-footer styles for improved modularity */
+.site-footer {
+    text-align: center;
+    color: #FFEB4B;
+    padding: 16px 0;
+    background: transparent;
+    font-size: 1rem;
+}

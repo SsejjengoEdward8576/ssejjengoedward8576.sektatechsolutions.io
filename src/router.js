@@ -1,4 +1,3 @@
-// router.js
 import React, { Suspense, lazy } from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -10,9 +9,16 @@ const AboutUs = lazy(() => import('./components/AboutUs'));
 const Contacts = lazy(() => import('./components/Contacts'));
 const RegistrationForm = lazy(() => import('./components/RegistrationForm'));
 const SearchResults = lazy(() => import('./components/SearchResults'));
-const NotFound = () => <div className="container mt-5">Page Not Found</div>;
 
-// More realistic mock items
+// Improved NotFound component
+const NotFound = () => (
+  <div className="container mt-5 text-center">
+    <h2>404 - Page Not Found</h2>
+    <a href="#/">Go to Home</a>
+  </div>
+);
+
+// Mock items for search results
 const items = [
   {
     id: 1,
@@ -53,7 +59,7 @@ const AppRouter = () => (
         <Route path="/our-works" element={<OurWorks />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/contacts" element={<Contacts />} />
-        <Route path="/registrationform" element={<RegistrationForm />} />
+        <Route path="/registration-form" element={<RegistrationForm />} />
         <Route path="/search" element={<SearchResults items={items} />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
